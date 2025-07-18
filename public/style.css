@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* background Header */
+#Header-Size{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 102%;
+    height: 12vh;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-right: 2%;
+    background-image: linear-gradient(to left, red, #045694, #045694) ;
+    box-shadow: 5px 5px 10px black;
+}
