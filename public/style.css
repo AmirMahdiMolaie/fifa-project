@@ -31,3 +31,63 @@ li{
     background-image: linear-gradient(to left, red, #045694, #045694) ;
     box-shadow: 5px 5px 10px black;
 }
+
+/* the position of the titles of header */
+.position-title-header{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.style-title-header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    cursor: pointer;    
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 2px 1px black;
+    transition: all 0.4s ease ;
+}
+
+.style-title-header:hover{
+    color: rgb(165, 165, 165)
+}
+
+/* logo and menu */
+#left-header{
+    display: flex;
+}
+
+.fifa-logo-header{
+    height: 38px;
+}
+
+.menu-bottun{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;
+    height: 5vh;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #296fa4;
+    border: black 2px 2px;    
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.lower-part{
+    bottom: 8px;
+}
+
+.main-part{
+    position: absolute;
+    min-width: 20px;
+    min-height: 4px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.upper-part{
+    top: 8px;
+}
