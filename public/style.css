@@ -49,7 +49,7 @@ li{
     position: relative;
 }
 .style-title-header:hover{
-    color: cornsilk;
+    color: rgb(255, 204, 0);
 }
 
 /* onderline style */
@@ -61,7 +61,7 @@ li{
     height: 2px;
     width: 0%;
     background-color: rgb(232, 178, 0);
-    transition: all 0.3s ease;
+    transition: all 0.4s 0.2s ease ;
 }
 
 .style-title-header:hover:after{
@@ -75,7 +75,7 @@ li{
 .fifa-logo-header{
     height: 38px;
 }
-.menu-bottun{
+.menu-button{
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -179,9 +179,10 @@ body.active_menu #Header{
     background-color: black;
     opacity: 0;
     transition: all 0.3s ease;
-    z-index: 100;
+    z-index: 1;
 }
 body.active_menu .style-background{
+    z-index: 100;
     opacity: 0.7;
 }
 
