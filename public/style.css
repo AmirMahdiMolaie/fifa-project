@@ -178,3 +178,40 @@ body.active_menu .style-background{
     height: 100vh;
     margin-top: 12vh;
 }
+
+/* Create slides  */
+.background-slide{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 100vh;
+}
+.slides{
+    height: 430px;
+    width: 440px;
+    border: solid black 1px;
+    box-shadow: black 1px 1px 1px;
+    cursor: pointer;
+    transition: all 0.7s 0.3s ease;  
+}
+.slides:hover{
+    scale: 1.04;
+    box-shadow: black 3px 3px 3px;
+}
+.imeges-slides{
+    height: 75%;
+    width: 100%;
+}
+.text-slides{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    padding: 15px;
+    font-size: 22px;
+    color: black; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
