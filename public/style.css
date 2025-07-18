@@ -12,8 +12,8 @@ li{
     list-style: none;
 }
 
-/* background Header */
-#Header-Size{
+/* Background Header */
+#Header{
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -32,7 +32,7 @@ li{
     box-shadow: 5px 5px 10px black;
 }
 
-/* the position of the titles of header */
+/* The position of the titles of header */
 .position-title-header{
     display: flex;
     justify-content: space-around;
@@ -47,20 +47,18 @@ li{
     text-shadow: 2px 2px 1px black;
     transition: all 0.4s ease ;
 }
-
 .style-title-header:hover{
     color: rgb(165, 165, 165)
 }
 
-/* logo and menu */
+/* Logo and menu */
+
 #left-header{
     display: flex;
 }
-
 .fifa-logo-header{
     height: 38px;
 }
-
 .menu-bottun{
     display: flex;
     justify-content: center;
@@ -74,11 +72,9 @@ li{
     margin: 0 30px;
     cursor: pointer;
 }
-
-.lower-part{
+.upper-part{
     bottom: 8px;
 }
-
 .main-part{
     position: absolute;
     min-width: 20px;
@@ -87,7 +83,55 @@ li{
     border-radius: 20px;
     transition: all 0.5s ease;
 }
-
-.upper-part{
+.lower-part{
     top: 8px;
+}
+
+/* Movement of shapes */
+body.active_menu .upper-part{
+    transform: rotate(-45deg);
+    bottom: 45%;
+}
+body.active_menu .main-part-style{
+    opacity: 0;
+}
+body.active_menu .lower-part{
+    transform: rotate(45deg);
+    top: 45%;
+}
+
+/* Menu slide */
+.background-menu{
+    position: fixed;
+    z-index: 2000;
+    left: -410px;
+    background-color: #045694;
+    min-width: 400px;
+    min-height: 100vh;
+    overflow: hidden;
+    box-shadow: black 3px 0px 2px;
+    transition: all 0.5s ease;
+}
+
+body.active_menu .background-menu{
+    left: 0px;
+}
+
+.top-menu{
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    margin-bottom: 40px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+#hr{
+    opacity: 0.3;
+    margin-left: -50px;
 }

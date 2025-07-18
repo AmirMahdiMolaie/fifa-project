@@ -1,0 +1,1 @@
+let menuHeader = () => document.querySelector('body').classList.toggle('active_menu');
