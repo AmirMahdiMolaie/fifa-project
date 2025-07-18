@@ -45,14 +45,30 @@ li{
     cursor: pointer;    
     color: rgb(245, 245, 245);
     text-shadow: 2px 2px 1px black;
-    transition: all 0.4s ease ;
+    transition: all 0.4s 0.2s ease ;
+    position: relative;
 }
 .style-title-header:hover{
-    color: rgb(165, 165, 165)
+    color: cornsilk;
+}
+
+/* onderline style */
+.style-title-header::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: rgb(232, 178, 0);
+    transition: all 0.3s ease;
+}
+
+.style-title-header:hover:after{
+    width: 100%;
 }
 
 /* Logo and menu */
-
 #left-header{
     display: flex;
 }
@@ -143,6 +159,7 @@ body{
     width: 102%;
     height: 1700px;
     overflow-x: hidden;
+    background-color: #eef2fb;
 }
 
 /* required changes */
@@ -162,7 +179,7 @@ body.active_menu #Header{
     background-color: black;
     opacity: 0;
     transition: all 0.3s ease;
-    z-index: 1;
+    z-index: 100;
 }
 body.active_menu .style-background{
     opacity: 0.7;
@@ -190,22 +207,26 @@ body.active_menu .style-background{
     width: 98%;
     height: 100vh;
 }
+
 .slides{
     height: 430px;
     width: 440px;
     border: solid black 1px;
-    box-shadow: black 1px 1px 1px;
+    box-shadow: black 2px 2px 3px;
     cursor: pointer;
     transition: all 0.7s 0.3s ease;  
 }
+
 .slides:hover{
     scale: 1.04;
-    box-shadow: black 3px 3px 3px;
+    box-shadow: black 4px 4px 6px;
 }
+
 .imeges-slides{
     height: 75%;
     width: 100%;
 }
+
 .text-slides{
     display: flex;
     width: 100%;
@@ -214,4 +235,26 @@ body.active_menu .style-background{
     font-size: 22px;
     color: black; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #045694;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: black 0px -3px 5px;
+}
+
+body.active_menu .footer{
+    z-index: 0;
+}
+
+.fifa-logo-footer{
+    height: 30px;
 }
