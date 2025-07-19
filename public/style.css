@@ -153,15 +153,19 @@ body.active_menu .background-menu{
 }
 
 /* Start body */
-
 body{
     position: relative;
-    width: 102%;
-    height: 1700px;
+    width: 102%;    
     overflow-x: hidden;
-    background-color: #eef2fb;
+    background-color: #eef2fb;    
 }
-
+.body-home{
+    height: 1700px;
+}
+.body-tournaments{
+    height: 1550px;
+  
+}
 /* required changes */
 body.active_menu{
     overflow: hidden;
@@ -205,14 +209,14 @@ body.active_menu .style-background{
     gap: 30px;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    width: 100%;
     height: 100vh;
 }
 
 .slides{
     height: 430px;
     width: 440px;
-    border: solid black 1px;
+    border: solid black 3px;
     box-shadow: black 2px 2px 3px;
     cursor: pointer;
     transition: all 0.7s 0.3s ease;  
@@ -268,8 +272,9 @@ body.active_menu .footer{
         width: 100%;
         height: 100vh;
         margin-top: 10vh;
+        margin-bottom: -50px ;
     }
-    
+
     .background-slide-tournament{
         display: flex;
         justify-content: space-between;
@@ -278,7 +283,7 @@ body.active_menu .footer{
         width: 90%;
         height: 80vh;
         border: solid black 1px;
-        box-shadow: black 2px 2px 2px;
+        box-shadow: black 4px 4px 4px;
     }
 
     .imeg-slide-tournament{
@@ -286,7 +291,41 @@ body.active_menu .footer{
         height: 100%;
     }
 
-    .imegesSlides-tournament{
+    .imeges-slides-tournament{
         height: 100%;
         width: 100%;
+    }
+    /* Create contents and design slide top */
+    .menu-tournament{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        padding:  80px 20px 0 50px;
+    }
+
+    .font-change-one{
+        font-size: 36px;
+    }
+
+    .button-slide-tournament{
+        position: relative;
+        z-index: 100;
+        margin-top: 70px;
+        font-size: large;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: azure;
+        border-radius: 30px;
+        height: 50px;
+        width: 190px;
+        border: solid black 1px;
+        box-shadow: black 2px 2px 2px;
+    }
+
+    .hr2{
+        width: 80%;
+        display: flex;
+        justify-content: center;
     }

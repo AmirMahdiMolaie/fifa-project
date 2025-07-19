@@ -24,12 +24,20 @@ app.get('/', (req, res) => {
         imeg1 : 'imeges/FIFA-WORLD-CUP-26-TICKETING-PROGRAMME-LAUNCHES-THIS-SEPTEMBER.webp',
         imeg2 : 'imeges/Chelsea-FC-v-Paris-Saint-Germain-Final-FIFA-Club-World-Cup-2025.webp',
         imeg3 : 'imeges/SE-Palmeiras-v-Chelsea-FC-Quarter-Final-FIFA-Club-World-Cup-2025.webp',
+        classBody : 'body-home'
     })
 });
 
 app.get('/tournaments', (req, res)=>{
     res.render('./tournaments.ejs', {
-        title : 'FIFA | tournaments'
+        title : 'FIFA | tournaments',
+        content1 : 'FIFA World Cup 26™',
+        content2 : 'FIFA Women’s World Cup Brazil 2027™ ',
+        content3 : 'FIFA World Cup 2034™ ',
+        imeg1 : 'imeges/FIFA_FWC26_Tournament-Thumbnail-4-3.webp',
+        imeg2 : 'imeges/FIFA_WWC27_Tournament-Thumbnail-4-3.webp',
+        imeg3 : 'imeges/FIFA-com_Bidding-Thumbnails_FWC2034.webp',
+        classBody : 'body-tournaments'
     })
 });
 
