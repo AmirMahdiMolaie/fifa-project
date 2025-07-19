@@ -17,7 +17,7 @@ app.use(express.static('partials'));
 // Connectin test
 app.get('/', (req, res) => {
     res.render('./home.ejs', {
-        title : 'Home',
+        title : 'FIFA | Home',
         content1 : 'FIFA World Cup 26™ Ticketing Programme launches this September',
         content2 : 'President Trump says FIFA is doing “fantastically well” in growing football in the United States',
         content3 : 'Australia’s Alireza Faghani appointed FIFA Club World Cup 2025™ final referee',
@@ -29,30 +29,30 @@ app.get('/', (req, res) => {
 
 app.get('/tournaments', (req, res)=>{
     res.render('./tournaments.ejs', {
-        title : 'world-rankings'
+        title : 'FIFA | tournaments'
     })
 });
 
 app.get('/world-rankings', (req, res)=>{
     res.render('./world-rankings.ejs', {
-        title : 'world-rankings'
+        title : 'FIFA | world-rankings'
     });
 });
 
 app.get('/watch-on-fifa', (req, res)=>{
     res.render('./watch-on-fifa.ejs', {
-        title : 'world-rankings'
+        title : 'FIFA | watch on fifa'
     });
 });
 
 app.get('/play', (req, res)=>{
     res.render('./play.ejs', {
-        title : 'world-rankings'
+        title : 'FIFA | play'
     });
 });
 
 app.use((req, res) =>{
     res.render('./404.ejs', {
-        title : 'world-rankings'
+        title : '404 | not found'
     });
-});
+})

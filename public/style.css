@@ -259,3 +259,34 @@ body.active_menu .footer{
 .fifa-logo-footer{
     height: 30px;
 }
+
+/* Start tournament style */
+    .container-tournament{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        margin-top: 10vh;
+    }
+    
+    .background-slide-tournament{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 2%;
+        background-color: #045694;
+        width: 90%;
+        height: 80vh;
+        border: solid black 1px;
+        box-shadow: black 2px 2px 2px;
+    }
+
+    .imeg-slide-tournament{
+        width: 50%;
+        height: 100%;
+    }
+
+    .imegesSlides-tournament{
+        height: 100%;
+        width: 100%;
+    }
