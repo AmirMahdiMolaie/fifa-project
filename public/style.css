@@ -282,7 +282,7 @@ body.active_menu .footer{
         background-color: #045694;
         width: 90%;
         height: 80vh;
-        border: solid black 1px;
+        border: solid black 3px;
         box-shadow: black 4px 4px 4px;
     }
 
@@ -329,3 +329,55 @@ body.active_menu .footer{
         display: flex;
         justify-content: center;
     }
+
+        /* Start world rankings style */
+
+        /* Create table ranking */
+        .template{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .table-ranking{
+            width: 70%;
+            background-color: black;
+            box-shadow: black 3px 3px 4px;
+        }
+
+        .thead{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(30, 0, 139);
+            height: 50px;
+            color: beige;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .thead th{
+            width: 100px;
+        }
+
+        .tbody{
+            background-color: rgb(255, 255, 255);
+        }
+
+        .rows-ranking{
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;   
+            width: 100%;
+            height: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .rows-ranking>th{
+            width: 100px;
+        }
+
+        .rows-ranking:nth-child(even){
+            background-color: #dde6ff;
+        }        

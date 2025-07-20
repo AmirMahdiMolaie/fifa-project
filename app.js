@@ -43,19 +43,20 @@ app.get('/tournaments', (req, res)=>{
 
 app.get('/world-rankings', (req, res)=>{
     res.render('./world-rankings.ejs', {
-        title : 'FIFA | world-rankings'
+        title : 'FIFA | world-rankings',
+        classBody : 'body-tournaments'
     });
 });
 
 app.get('/watch-on-fifa', (req, res)=>{
     res.render('./watch-on-fifa.ejs', {
-        title : 'FIFA | watch on fifa'
+        title : 'FIFA | watch on fifa',
     });
 });
 
 app.get('/play', (req, res)=>{
     res.render('./play.ejs', {
-        title : 'FIFA | play'
+        title : 'FIFA | play',
     });
 });
 
