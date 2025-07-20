@@ -164,7 +164,6 @@ body{
 }
 .body-tournaments{
     height: 1550px;
-  
 }
 /* required changes */
 body.active_menu{
@@ -337,8 +336,11 @@ body.active_menu .footer{
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             width: 100%;
             height: 100vh;
+            gap: 30px;
+            transition: all 0.3s ease;
         }
 
         .table-ranking{
@@ -372,6 +374,7 @@ body.active_menu .footer{
             width: 100%;
             height: 40px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
         }
         
         .rows-ranking>th{
@@ -385,7 +388,7 @@ body.active_menu .footer{
         .rows-ranking:nth-child(even){
             background-color: #dde6ff;
         }     
-        
+
         .rows-ranking>th>p{
             position: absolute;
             left: 80%;
@@ -404,4 +407,72 @@ body.active_menu .footer{
 
         .team-column{
         margin: 0 120px 0 -120px;    
+        }
+        /* button more ranking */
+        .add-ranking{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            width: 70%;
+            height: 40%;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .button-ranking{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            color: whitesmoke;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: #296fa4;
+            cursor: pointer;
+            z-index: 10;
+            text-shadow: black 2px 2px 2px;
+            box-shadow: black 2px 2px 2px;
+            transition: all 0.3s 0.1s ease;
+        }
+
+        .button-ranking:hover{
+            scale: 1.1;
+            color: #ffff2f;
+            box-shadow: black 4px 4px 4px;
+        }
+
+        .rows-ranking2{
+            height: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        body.active_rank .rows-ranking2{
+            height: 40px;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .change{
+            opacity: 0;
+            z-index: 1;
+            transition: all 0s ease;
+            background-color: crimson;
+            transition: all 0.3s 0.1s ease;
+        }
+
+        body.active_rank .change{
+            z-index: 100;
+            opacity: 1;
+        }
+
+        body.active_rank .add-ranking{
+            height: 61%;
+        }
+
+        body.active_rank .template{
+            height: 150vh;
         }

@@ -17,7 +17,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody class="tbody">
+                        <tbody class="tbody table-ranking1">
                 <tr class="rows-ranking">
                     <th>
                         1
@@ -168,8 +168,14 @@
                         +8.85
                     </th>
                 </tr>
-            </tbody>
+            <%- include('./partials/Ranking/fifa-ranking.ejs') %>   
         </table>
+        <div class="add-ranking">
+            <div class="button-ranking" onclick="rankHander()">more ranking</div>
+        </div>
+        <div class="add-ranking">
+            <div class="button-ranking change" onclick="rankHander()">Fewer cases</div>
+        </div>
    </section>
     
 <%- include('./partials/footer.ejs')%>
