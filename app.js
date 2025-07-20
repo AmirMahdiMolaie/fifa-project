@@ -51,17 +51,20 @@ app.get('/world-rankings', (req, res)=>{
 app.get('/watch-on-fifa', (req, res)=>{
     res.render('./watch-on-fifa.ejs', {
         title : 'FIFA | watch on fifa',
+        classBody : 'body-tournaments'
     });
 });
 
 app.get('/play', (req, res)=>{
     res.render('./play.ejs', {
         title : 'FIFA | play',
+        classBody : 'body-tournaments'
     });
 });
 
 app.use((req, res) =>{
     res.render('./404.ejs', {
-        title : '404 | not found'
+        title : '404 | not found',
+        classBody : 'body-tournaments'
     });
 })

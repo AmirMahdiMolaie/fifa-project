@@ -376,8 +376,32 @@ body.active_menu .footer{
         
         .rows-ranking>th{
             width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
-
+        
         .rows-ranking:nth-child(even){
             background-color: #dde6ff;
-        }        
+        }     
+        
+        .rows-ranking>th>p{
+            position: absolute;
+            left: 80%;
+        }   
+
+        .flag-ranking{
+            width: 35%;
+            height: 90%;
+            border: solid black 1px;
+            box-shadow: black 2px 2px 3px;
+        }
+
+        .team-thead{
+            margin: 0 120px 0 -120px;
+        }
+
+        .team-column{
+        margin: 0 120px 0 -120px;    
+        }
