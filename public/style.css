@@ -535,6 +535,9 @@ body.active_menu .footer{
                 border-bottom-right-radius: 20px;
                 border-top-left-radius: 20px;
                 background-image: linear-gradient(to top, #002261, #02112d);
+                box-shadow: black 4px 4px 5px;
+                z-index: 50;
+                filter: blur(2px);
             }
 
             .card-play{
@@ -613,4 +616,94 @@ body.active_menu .footer{
 
             .tournament-play{
                 color: rgb(81, 81, 255);
+            }
+
+            /* positions */
+            .position1{
+                transform: translate(-50%);
+            }
+
+            .position2{
+                transform: translate(-50%);
+                transition: all 0.5s 0.2s ease;
+            }
+
+            .position3{
+                transform: translate(-40%);
+                scale: 1.2;
+                transition: all 0.5s 0.2s ease;
+                filter: blur(0px);
+            }
+
+            .position4{
+                transform: translate(-50%);
+            }
+
+            .position5{
+                transform: translate(-50%);
+            }
+
+            /* change position */
+            .position1{
+                animation: position1 1s 0.2s both;
+            }
+
+            @keyframes position1 {
+                0%{
+                left: 80%;
+                }
+                100%{
+                left: 120%;
+                }
+            }
+
+            .position2{
+                animation: position2 1s 0.2s both;
+            }
+
+            @keyframes position2 {
+                0%{
+                left: 50%;
+                }
+                100%{
+                left: 80%;
+                }
+            }
+
+            .position3{
+                animation: position3 1s 0.2s both;
+            }
+
+            @keyframes position3 {
+                0%{
+                left: 20%; 
+                }
+                100%{
+                left: 50%;
+                }}
+            
+            .position4{
+                animation: position4 0s 0.2s both;
+            }
+
+            @keyframes position4 {
+                0%{
+                left: 120%;
+                }
+                100%{
+                left: -20%;
+                }
+            }
+
+            .position5{
+                animation: position5 1s 0.2s both;
+            }
+
+            @keyframes position5 {
+                0%{
+                left: -20%;
+                }
+                100%{
+                left: 20%;
+                }
             }
