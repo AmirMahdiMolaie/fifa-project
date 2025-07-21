@@ -157,14 +157,22 @@ body{
     position: relative;
     width: 102%;    
     overflow-x: hidden;
-    background-color: #eef2fb;    
+    background-color: #eef2fb;
+    transition: all 0.3s ease;
 }
+
 .body-home{
     height: 1700px;
 }
+
 .body-tournaments{
     height: 1550px;
 }
+
+.body-ranking{
+    height: 1650px;
+}
+
 /* required changes */
 body.active_menu{
     overflow: hidden;
@@ -271,7 +279,6 @@ body.active_menu .footer{
         width: 100%;
         height: 100vh;
         margin-top: 10vh;
-        margin-bottom: -50px ;
     }
 
     .background-slide-tournament{
@@ -330,7 +337,29 @@ body.active_menu .footer{
     }
 
         /* Start world rankings style */
+        .background-color-rank{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(to left, rgb(107, 0, 0), #00205c, #02112d);
+            margin-top: 60px;
+            position: relative;
+        }
+        .background-color-rank>p{
+            position: absolute;
+            color: #dde6ff;
+            width: 80%;
+            font-size:5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
+        .background-picture-rank{
+            height: 100%;
+            width: 100%;
+            opacity: 0.15;
+        }
+        
         /* Create table ranking */
         .template{
             display: flex;
@@ -338,13 +367,13 @@ body.active_menu .footer{
             align-items: center;
             flex-direction: column;
             width: 100%;
-            height: 100vh;
+            height: 80vh;
             gap: 30px;
             transition: all 0.3s ease;
         }
 
         .table-ranking{
-            width: 70%;
+            width: 80%;
             background-color: black;
             box-shadow: black 3px 3px 4px;
         }
@@ -354,7 +383,7 @@ body.active_menu .footer{
             justify-content: space-around;
             align-items: center;
             background-color: rgb(30, 0, 139);
-            height: 50px;
+            height: 55px;
             color: beige;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -372,7 +401,8 @@ body.active_menu .footer{
             justify-content: space-around; 
             align-items: center;   
             width: 100%;
-            height: 40px;
+            height: 45px;
+            font-size: 17px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: white;
         }
@@ -414,7 +444,7 @@ body.active_menu .footer{
             justify-content: center;
             align-items: end;
             width: 70%;
-            height: 40%;
+            height: 45%;
             position: absolute;
             transition: all 0.3s ease;
         }
@@ -470,9 +500,13 @@ body.active_menu .footer{
         }
 
         body.active_rank .add-ranking{
-            height: 61%;
+            height: 56%;
+        }
+
+        body.active_rank{
+            height: 2050px;
         }
 
         body.active_rank .template{
-            height: 150vh;
+            height: 135vh;
         }

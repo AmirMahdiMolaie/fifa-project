@@ -44,27 +44,27 @@ app.get('/tournaments', (req, res)=>{
 app.get('/world-rankings', (req, res)=>{
     res.render('./world-rankings.ejs', {
         title : 'FIFA | world-rankings',
-        classBody : 'body-tournaments'
+        classBody : 'body-ranking',
     });
 });
 
 app.get('/watch-on-fifa', (req, res)=>{
     res.render('./watch-on-fifa.ejs', {
         title : 'FIFA | watch on fifa',
-        classBody : 'body-tournaments'
+        classBody : 'body-home'
     });
 });
 
 app.get('/play', (req, res)=>{
     res.render('./play.ejs', {
         title : 'FIFA | play',
-        classBody : 'body-tournaments'
+        classBody : 'body-homes'
     });
 });
 
 app.use((req, res) =>{
     res.render('./404.ejs', {
         title : '404 | not found',
-        classBody : 'body-tournaments'
+        classBody : 'body-home'
     });
 })
