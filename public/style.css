@@ -119,6 +119,7 @@ body.active_menu .lower-part{
 /* Menu slide */
 .background-menu{
     position: fixed;
+    top: 0;
     z-index: 2000;
     left: -410px;
     background-color: #045694;
@@ -158,7 +159,6 @@ body{
     width: 102%;    
     overflow-x: hidden;
     background-color: #eef2fb;
-    transition: all 0.3s ease;
 }
 
 .body-home{
@@ -276,7 +276,7 @@ body.active_menu .footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 102%;
         height: 100vh;
         margin-top: 10vh;
     }
@@ -284,7 +284,7 @@ body.active_menu .footer{
     .background-slide-tournament{
         display: flex;
         justify-content: space-between;
-        margin-right: 2%;
+        margin-right: 4%;
         background-color: #045694;
         width: 90%;
         height: 80vh;
@@ -343,10 +343,10 @@ body.active_menu .footer{
             align-items: center;
             text-align: center;
             background-image: linear-gradient(to left, rgb(107, 0, 0), #00205c, #02112d);
-            /* margin-top: 60px; */
             position: relative;
             height: 100%;
             width: 100%;
+            margin-right: 0%;
         }
         .background-color-rank>p{
             position: absolute;
@@ -706,4 +706,11 @@ body.active_menu .footer{
                 100%{
                 left: 20%;
                 }
+            }
+
+            /* Start watch on fifa file */
+            .position-watch{
+                position: absolute;
+                left: 50%;
+                top: 50%;
             }
