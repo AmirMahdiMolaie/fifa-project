@@ -1,13 +1,16 @@
 // Require the framworks
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+const { default: mongoose, connect } = require('mongoose');
 const morgan = require('morgan')
+const Blog = require('./model/blog')
 
 // Creating vars
 const app = express();
 
 // Setting the ejs technology
 app.set('view engine', 'ejs');
+
+app.use(express.urlencoded( { extended : true } ))
 
 // Connectin the public folder 
 app.use(express.static('public'));
@@ -20,32 +23,7 @@ mongoose.connect(dbURI)
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err))
 
-    const Blog = require('./blog')
-
-    app.get('/blog', (req, res) => {
-        const blog = new Blog({
-            name : 'amir',
-            age : 13,
-            number : 9012,
-        })
-
-    blog.save()
-    .then((result) => res.send(result))
-    .catch((err) => console.log(err))
-        })
-
-    app.get('/all-blog', (req, res) =>{
-        Blog.find()
-            .then((result) => res.send(result))
-            .catch((err) => console.log(err))
-    })
-    app.get('/d all-blog', (req, res) =>{
-        Blog.deleteMany()
-            .then((result) => res.send(result))
-            .catch((err) => console.log(err))
-    })
-
-// Connectin test
+// Connectin server pages
 app.get('/', (req, res) => {
     res.render('./home', {
         title : 'FIFA | Home',
@@ -90,10 +68,21 @@ app.get('/play', (req, res)=>{
     });
 });
 
+app.post('/login', (req, res) =>{
+        console.log(req.body)
+    })
+app.get('/login', (req,res) => {
+    res.render('login', {title : ' fifa | login',
+    classBody : 'body-404', 
+    picture : 'imeges/zamin.jpg'
+})})
+
 app.use((req, res) =>{
     res.render('./404', {
         title : '404 | not found',
-        classBody : 'body-home'
+        classBody : 'body-404',
+        picture : 'imeges/stephen-child-referees-assistant_3332692.jpg',
+        content : 'Page not found | 404'
     });
 })
 

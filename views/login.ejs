@@ -1,0 +1,24 @@
+<%- include('./partials/head+header.ejs') %>
+    <section class="container-tournament">
+        <div class="background-color-login">
+            <img class="background-picture-login" src=" <%= picture %> " alt="">            
+                 <section class="login-template">
+                    <form class="form" action="/login" method="post">
+                        <label for="name">Name</label>
+                        <input class="type-content" type="text" id="name" name="name">
+                        <br>
+                        <label for="age">Age</label>
+                        <input class="type-content" type="number" id="age" name="age">
+                        <br>
+                        <label for="number">Number phone</label>
+                        <input class="type-content" type="number" id="number" name="number">
+                        <br>
+                        <label for="emial">Emial</label>
+                        <input class="type-content" type="text" id="emial" name="emial">
+                        <br>
+                        <input class="submit" type="submit">
+                    </form>
+                </section>`
+            </div>
+    </section>
+<%- include('./partials/footer.ejs') %>  
