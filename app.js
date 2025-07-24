@@ -23,6 +23,8 @@ mongoose.connect(dbURI)
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err))
 
+app.use(express.urlencoded( { extended: true } ))
+
 // Connectin server pages
 app.get('/', (req, res) => {
     res.render('./home', {
@@ -69,8 +71,15 @@ app.get('/play', (req, res)=>{
 });
 
 app.post('/login', (req, res) =>{
-        console.log(req.body)
+    const newBlog = new Blog(req.body)
+
+    newBlog.save()
+        .then((result) => {
+            console.log(req.body)
+        })
+        .catch((err) => console.log(err))
     })
+
 app.get('/login', (req,res) => {
     res.render('login', {title : ' fifa | login',
     classBody : 'body-404', 

@@ -1,6 +1,5 @@
-const { request } = require('express');
-const mongoose = require('mongoose');
-
+// Creating a model for login page
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const blogSchema = new Schema ({
@@ -22,6 +21,6 @@ const blogSchema = new Schema ({
     },
 }, {timestamps : true})
 
-const Blog = mongoose.model('Blog', blogSchema);
+const Blog = mongoose.model('Blog' , blogSchema)
 
-mongoose.model.exports = Blog;
+module.exports = Blog

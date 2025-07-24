@@ -1,4 +1,9 @@
 <%- include('./partials/head+header.ejs') %>
+<span class="style-background-login">
+    <p class="complate-login">
+        <a href="/">Complated login <br> back home</a>
+    </p>
+</span>
     <section class="container-tournament">
         <div class="background-color-login">
             <img class="background-picture-login" src=" <%= picture %> " alt="">            
@@ -16,9 +21,9 @@
                         <label for="emial">Emial</label>
                         <input class="type-content" type="text" id="emial" name="emial">
                         <br>
-                        <input class="submit" type="submit">
+                        <input onclick="loginHander()" class="submit" type="submit">
                     </form>
-                </section>`
+                </section>
             </div>
     </section>
 <%- include('./partials/footer.ejs') %>  
